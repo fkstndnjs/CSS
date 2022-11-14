@@ -6,10 +6,12 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <title>Document</title>
         <style>
+            /* 더 세밀하게 선택할 수 있는 순으로 */
             /* 우선순위 4: 태그 선택자 */
             li {
                 color: red;
             }
+
             /* 우선순위 3: class */
             .class-selector {
                 /* color: green !important;  => !important를 붙이면 우선순위가 제일 첫번째로 됨 */
@@ -20,29 +22,17 @@
             #id-selector {
                 color: blue;
             }
-
-            ol li {
-                color: black;
-            }
         </style>
     </head>
     <body>
         <ul>
-            <li>html</li>
-
             <!-- 우선순위 1: style -->
-            <li id="id-selector" class="class-selector" style="color: yellow">
+            <li id="id-selector" class="class-selector" style="color: cyan">
                 css
             </li>
-            <li>JavaScript</li>
+            <li id="id-selector" class="class-selector">html</li>
+            <li class="class-selector">JavaScript</li>
+            <li>WASM</li>
         </ul>
-
-        <!-- 더 세밀하게 선택할 수 있는 순으로 -->
-        <ol>
-            <li>style attribute</li>
-            <li>id selector</li>
-            <li>class selector</li>
-            <li>tag selector</li>
-        </ol>
     </body>
 </html>
