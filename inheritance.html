@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Document</title>
+        <style>
+            /* html 태그 밑의 모든 요소의 색이 red로 바뀜 */
+            html {
+                color: red;
+            }
+            #select {
+                color: blue;
+            }
+            /* border는 하위 요소로 상속되지 않음 */
+            body {
+                border: 1px solid cyan;
+            }
+        </style>
+    </head>
+    <body>
+        <h1>수업내용</h1>
+        <ul>
+            <li>HTML</li>
+            <li>CSS</li>
+            <li id="select">JavaScript</li>
+        </ul>
+    </body>
+</html>
