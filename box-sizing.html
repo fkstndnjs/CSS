@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <!-- border가 커지면 content영역의 크기를 150px로 맞추기 위해 2개의 div의 가로와 세로길이가 차이가 나버림 -->
+    <!-- 이를 위해서 box-sizing 속성의 값을 기본값인 content-box에서 border-box로 바꾸면 border의 길이를 기준으로 맞춰줌 -->
+    <style>
+      * {
+        box-sizing: border-box;
+      }
+      div {
+        margin: 10px;
+        width: 150px;
+      }
+      #small {
+        border: 10px solid black;
+      }
+      #large {
+        border: 30px solid black;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="small">HELLO</div>
+    <div id="large">HELLO</div>
+  </body>
+</html>

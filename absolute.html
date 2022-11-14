@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      #parent,
+      #other {
+        border: 5px solid tomato;
+      }
+      #grand {
+        position: relative;
+      }
+      #parent {
+        position: relative;
+      }
+      /* position을 absolute로 하게되면 부모 자식 관계가 끊긴다 */
+      /* 부모와 자식관계가 끊기는 순간 독립적인 요소가 되어 딱 content 크기만큼만 style이 적용된다 */
+      /* position을 absolute로 한 요소는 position이 static이 아닌 요소를 찾을때까지 올라가서 그 위치부터 시작한다, 만약 아무 요소도 없으면 html태그를 기준으로 한다 */
+      #me {
+        background-color: black;
+        color: white;
+        position: absolute;
+        left: 0px;
+        top: 0px;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="other">other</div>
+    <div id="grand">
+      grand
+      <div id="parent">
+        parent
+        <div id="me">me</div>
+      </div>
+    </div>
+  </body>
+</html>

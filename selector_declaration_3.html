@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Document</title>
+        <style>
+            /* 부모 자식 선택자 */
+            ul li {
+                color: blueviolet;
+            }
+            #test > li {
+                /* border는 상속이 밑에까지 안되지만 color는 밑에 요소까지 다 바뀜 */
+                border: 1px solid blue;
+                color: red;
+            }
+            ul,
+            ol {
+                background-color: aliceblue;
+            }
+        </style>
+    </head>
+    <body>
+        <ul>
+            <li>HTML</li>
+            <li>CSS</li>
+            <li>JavaScript</li>
+        </ul>
+        <ol id="test">
+            <li>HTML</li>
+            <li>
+                CSS
+                <ol>
+                    <li>data 1</li>
+                    <li>data 2</li>
+                </ol>
+            </li>
+            <li>JavaScript</li>
+        </ol>
+    </body>
+</html>

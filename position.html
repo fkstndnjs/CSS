@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      div {
+        border: 5px solid tomato;
+        margin: 10px;
+      }
+      #me {
+        position: static; /* 기본값 */
+        position: relative; /* 원래 위치에서 상대적으로 움직임 */
+        /* left, top이 right, bottom 보다 우선 */
+        left: 50px;
+        top: 50px;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="other">other</div>
+    <div id="parent">
+      parent
+      <div id="me">me</div>
+    </div>
+  </body>
+</html>
