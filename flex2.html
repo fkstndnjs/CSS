@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Document</title>
+        <style>
+            body > div {
+                border: 1px solid black;
+            }
+            .container {
+                background-color: powderblue;
+                display: flex;
+                /* flex-direction: row; 기본값 */
+            }
+            .container2 {
+                background-color: powderblue;
+                display: flex;
+                flex-direction: column;
+            }
+            .container3 {
+                background-color: powderblue;
+                display: flex;
+            }
+            .container4 {
+                background-color: powderblue;
+                display: flex;
+            }
+            .container5 {
+                background-color: powderblue;
+                display: flex;
+            }
+            .item {
+                background-color: tomato;
+                color: white;
+                border: 1px solid white;
+            }
+            .container .item:nth-child(2) {
+                flex-basis: 200px;
+            }
+            .container2 .item:nth-child(2) {
+                flex-basis: 200px;
+            }
+            /* 1, 1, 1, 1, 1 => 1/5 씩 */
+            .container3 .item {
+                flex-grow: 1;
+            }
+            /* 1, 2, 1, 1, 1 => 1/6 씩, 2번째 item만 2/6만큼 */
+            .container4 .item {
+                flex-grow: 1;
+            }
+            .container4 .item:nth-child(2) {
+                flex-grow: 2;
+            }
+            .container5 .item:nth-child(2) {
+                flex-basis: 600px;
+                flex-shrink: 0; /* shrink가 여러 곳에 다른 값으로 존재할 경우 제일 큰 값의 box부터 빨리 줄어든다 */
+            }
+        </style>
+    </head>
+    <body>
+        <div class="container">
+            <div class="item">1</div>
+            <div class="item">2</div>
+            <div class="item">3</div>
+            <div class="item">4</div>
+            <div class="item">5</div>
+        </div>
+        <br />
+        <div class="container2">
+            <div class="item">1</div>
+            <div class="item">2</div>
+            <div class="item">3</div>
+            <div class="item">4</div>
+            <div class="item">5</div>
+        </div>
+        <br />
+        <div class="container3">
+            <div class="item">1</div>
+            <div class="item">2</div>
+            <div class="item">3</div>
+            <div class="item">4</div>
+            <div class="item">5</div>
+        </div>
+        <br />
+        <div class="container4">
+            <div class="item">1</div>
+            <div class="item">2</div>
+            <div class="item">3</div>
+            <div class="item">4</div>
+            <div class="item">5</div>
+        </div>
+        <br />
+        <div class="container5">
+            <div class="item">1</div>
+            <div class="item">2</div>
+            <div class="item">3</div>
+            <div class="item">4</div>
+            <div class="item">5</div>
+        </div>
+    </body>
+</html>
